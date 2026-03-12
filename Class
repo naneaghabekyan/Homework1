@@ -8,7 +8,7 @@ Age
 Պահանջներ
 Ստեղծել 2 student
 Գրանցել course-ում
-Տպել արդյունքը */
+Տպել արդյունքը 
 
 using System;
 using System.Collections.Generic;
@@ -79,3 +79,63 @@ namespace lab2
         }
     }
 }
+*/
+
+
+
+/*1. Գրիր class Student, որը․
+○ Ունի Name, Age, StudentId,
+○ Static field → Count (քանի ուսանող է ստեղծվել),
+○ Constructor chaining տարբերակներով,
+○ Console demo՝ ստեղծիր 3 ուսանող։
+
+using System;
+using System.Threading;
+
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Student first= new Student();
+            first.Print();
+            Student second= new Student(1,"Lilit",18);
+            second.Print();
+            Student third = new Student("Nane");
+            third.Print();
+
+            Console.WriteLine("The current number of students: {0}",Student.Count);
+
+        }
+    }
+
+    public class Student
+    {
+        public int StudentId { get;private set; }
+        public string Name { get;private set; }
+        public int Age { get;private set; }
+        public static int Count=0;
+
+        public Student() : this(0, "Unknown", 18) { }
+        public Student(string name) : this(0, name, 18) { }
+        public Student(int studentId, string name, int age)
+        {
+            StudentId = studentId;
+            Name = name;
+            Age = age;
+            Count++;
+        }
+
+        public void Print()
+        {
+            Console.WriteLine($"{StudentId}. {Name}: {Age}.");
+        }
+    }
+
+}
+*/
+
+
+
