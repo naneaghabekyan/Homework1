@@ -1,25 +1,3 @@
-﻿// Ֆիբոնաչի ռեկուրսիվ
-using System;
-
-namespace homework_1
-{
-    internal class Program
-    {
-        static void Fibonachi(int value)
-        {
-
-        }
-        static void Main()
-        {
-            Console.Write("Enter the numberf: ");
-            int Num=Convert.ToInt32(Console.ReadLine());
-            Fibonachi(Num);
-        }
-    }
-}
-
-
-
 /* Գրիր ծրագիր, որը հարցնում է․ քո անունը, ազգանունը, քաղաքի անունը, և հետո տպում է ամբողջական նախադասություն․
 using System;
 
@@ -241,7 +219,6 @@ namespace homework_1
 
 
 
-
 /* Գրիր մեթոդ, որը ստանում է string և վերադարձնում է այն reverse եղած տարբերակով։
 using System;
 
@@ -271,9 +248,6 @@ namespace homework_1
 }
 }
 */
-
-
-
 
 
 
@@ -312,10 +286,6 @@ namespace homework_1
 
 
 
-
-
-
-
 /* Գրիր ծրագիր, որը ստուգում է, արդյո՞ք մուտքագրված թիվը զույգ է, թե կենտ։
 using System;
 
@@ -335,8 +305,6 @@ namespace homework_1
     }
 }
 */
-
-
 
 
 
@@ -374,6 +342,7 @@ namespace homework_1
     }
 }
 */
+
 
 
 /* Գրիր ծրագիր, որը հաշվում է ուղղանկյան մակերեսը և պարագիծը։
@@ -415,4 +384,5 @@ namespace homework_1
         }
     }
 }
+
 */
