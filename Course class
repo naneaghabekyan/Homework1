@@ -1,0 +1,81 @@
+/* Ստեղծել Course class՝
+Name
+MaxStudents
+EnrollStudent(Student student)
+Ստեղծել Student class՝
+Name
+Age
+Պահանջներ
+Ստեղծել 2 student
+Գրանցել course-ում
+Տպել արդյունքը */
+
+using System;
+using System.Collections.Generic;
+
+namespace lab2
+{
+    public class Course
+    {
+        public string Name { get; private set; }
+        public int MaxStudents { get; private set; }
+
+        private List<Student> students = new List<Student>();
+
+        public Course(string name, int maxStudents)
+        {
+            Name = name;
+            MaxStudents = maxStudents;
+        }
+
+        public void EnrollStudent(Student student)
+        {
+            if (students.Count < MaxStudents)
+            {
+                students.Add(student);
+            }
+            else
+            {
+                Console.WriteLine("You exceeded MaxStudents!");
+            }
+        }
+
+        public void PrintStudents()
+        {
+            Console.WriteLine("Course: " + Name);
+
+            foreach (Student student in students)
+            {
+                Console.WriteLine($"{student.Name} : {student.Age}");
+            }
+        }
+    }
+
+    public class Student
+    {
+        public int Age { get; private set; }
+        public string Name { get; private set; }
+
+        public Student(int age, string name)
+        {
+            Age = age;
+            Name = name;
+        }
+    }
+
+    internal class Program
+    {
+        static void Main()
+        {
+            Student student1 = new Student(19, "Yelena");
+            Student student2 = new Student(20, "Nane");
+
+            Course course1 = new Course("Programming", 54);
+
+            course1.EnrollStudent(student1);
+            course1.EnrollStudent(student2);
+
+            course1.PrintStudents();
+        }
+    }
+}
